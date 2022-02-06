@@ -27,6 +27,9 @@ const message=(req,res,next)=>{
 //     err?console.log(err):console.log(data);
 // }
 // ))
+app.get('/',(req,res)=>
+res.sendFile(path.join(__dirname,"public","index.html")))
+
 app.use(express.static(path.join(__dirname,'public')))
 
 const server=app.listen(PORT,(err)=>err?console.log(err):console.log(`server runnig on port ${PORT}`))
