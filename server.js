@@ -30,14 +30,14 @@ const message=(req,res,next)=>{
 // app.get("/users",message,(req,res)=>{
 //     res.send(users)
 // })
-app.get("/users",(req,res)=>{
-    res.json(users);
-})
-app.get("/user/:id",(req,res)=>{
-    res.json(users.filter(user=>user.id==req.params.id))
-})
+// app.get("/users",(req,res)=>{
+//     res.json(users);
+// })
+// app.get("/user/:id",(req,res)=>{
+//     res.json(users.filter(user=>user.id==req.params.id))
+// })
 
 
-// app.use(express.static(path.join(__dirname,'public')))
+app.use(express.static(path.join(__dirname,'public')))
 
 const server=app.listen(PORT,(err)=>err?console.log(err):console.log(`server runnig on port ${PORT}`))
