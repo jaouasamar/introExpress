@@ -2,7 +2,7 @@ const express = require ('express');
 const app=express();
 const fs= require('fs')
 const path= require('path')
-const users=require('./users')
+const users=require('./api/users')
 const PORT= process.env.PORT||5000
 
 /**Middleware **/
@@ -20,6 +20,9 @@ const message=(req,res,next)=>{
 // )
 // app.get("/users",message,(req,res)=>{
 //     res.send(users)
+// })
+// app.get("/users",(req,res)=>{
+//     res.json(users);
 // })
 // app.get('/index.html',(req,res)=>
 // fs.readFile('/index.html','utf-8',(err,data)=>
